@@ -54,7 +54,7 @@ if(NOT DISABLE_CURL)
         option(BUILD_TESTING "Set to ON to build cURL tests." OFF)
         option(BUILD_CURL_EXE "Set to ON to build cURL executable." OFF)
         set(CURL_FOUND TRUE)
-        set(CURL_LIBRARIES libcurl)
+        set(CURL_LIBRARIES curl)
         set(CURL_INCLUDE_DIRS
             ${CURL_SOURCE_DIR}/include
             ${CURL_BINARY_DIR}/include/curl)
