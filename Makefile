@@ -5,7 +5,7 @@ all: build
 
 build:
 	@mkdir -p $(BUILD_DIR)
-	cd $(BUILD_DIR); cmake ../ -DCMAKE_BUILD_TYPE=$(BUILDTYPE)
+	cd $(BUILD_DIR); cmake ../
 	$(MAKE) -C $(BUILD_DIR) -j8
 
 install:

@@ -53,7 +53,6 @@ if(NOT DISABLE_CURL)
         option(HTTP_ONLY "disables all protocols except HTTP" ON)
         option(BUILD_TESTING "Set to ON to build cURL tests." OFF)
         option(BUILD_CURL_EXE "Set to ON to build cURL executable." OFF)
-        add_subdirectory(deps/curl)
         set(CURL_FOUND TRUE)
         set(CURL_LIBRARIES libcurl)
         set(CURL_INCLUDE_DIRS
