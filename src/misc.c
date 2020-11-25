@@ -32,7 +32,7 @@
 #include <curl/curl.h>
 #endif
 
-#include <replxx.h>
+//#include <replxx.h>
 
 
 static JSValue tjs_hrtime(JSContext *ctx, JSValueConst this_val, int argc, JSValueConst *argv) {
@@ -283,7 +283,7 @@ static JSValue tjs_print(JSContext *ctx, JSValueConst this_val, int argc, JSValu
 
     return JS_UNDEFINED;
 }
-
+/*
 static JSValue tjs_prompt(JSContext *ctx, JSValueConst this_val, int argc, JSValueConst *argv) {
     JSValue str;
 
@@ -316,7 +316,7 @@ static JSValue tjs_prompt(JSContext *ctx, JSValueConst this_val, int argc, JSVal
     }
 
     return str;
-}
+}*/
 
 static JSValue tjs_random(JSContext *ctx, JSValueConst this_val, int argc, JSValueConst *argv) {
     size_t size;
@@ -364,7 +364,7 @@ static const JSCFunctionListEntry tjs_misc_funcs[] = {
     JS_CFUNC_MAGIC_DEF("print", 1, tjs_print, 0),
     JS_CFUNC_MAGIC_DEF("printError", 1, tjs_print, 1),
     JS_CFUNC_MAGIC_DEF("alert", 1, tjs_print, 1),
-    JS_CFUNC_DEF("prompt", 0, tjs_prompt),
+//    JS_CFUNC_DEF("prompt", 0, tjs_prompt),
     JS_CFUNC_DEF("random", 3, tjs_random),
 };
 

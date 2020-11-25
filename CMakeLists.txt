@@ -114,4 +114,4 @@ if (NOT DISABLE_WASM)
     target_link_libraries(tjs m3)
 endif()
 
-target_link_libraries(tjs qjs uv_a m replxx stdc++)
+target_link_libraries(tjs qjs uv_a m stdc++)
