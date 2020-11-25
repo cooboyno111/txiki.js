@@ -6,6 +6,7 @@ all: build
 build:
 	@mkdir -p $(BUILD_DIR)
 	cd $(BUILD_DIR); cmake ../
+	cp qjsc_x64 $(BUILD_DIR)
 	$(MAKE) -C $(BUILD_DIR) -j8
 
 install:
