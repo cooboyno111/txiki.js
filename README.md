@@ -56,6 +56,7 @@ Other extras:
 ## Supported platforms
 
 * GNU/Linux
+* Openwrt/Lede
 * macOS
 * Windows (experimental)
 * Other Unixes (please test!)
