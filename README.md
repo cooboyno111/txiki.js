@@ -24,7 +24,7 @@ It was formerly named *quv*.
 - Performance API
 - Worker API
 - Crypto API (just getRandomValues)
-- WebAssembly (no tables, globals or memory support yet)
+- WebAssembly ( delete )
 
 ### Custom features
 
@@ -40,7 +40,7 @@ It was formerly named *quv*.
 - Worker threads
 - Child processes
 - DNS (getaddrinfo)
-- WASI (no memory support yet)
+- WASI ( delete )
 
 See the [full API].
 
@@ -81,8 +81,7 @@ txiki.js stands on shoulders of giants. It wouldn't be what it is today without 
 
 * [QuickJS]: JavaScript engine
 * [libuv]: platform abstraction layer
-* [wasm3]: WASM engine
-* [curl]: HTTP client
+* [curl]: HTTP client (sudo apt-get install libcurl4-openssl-dev use system curl)
 
 In addition, txiki.js has these [contributors] to thank for their help.
 
