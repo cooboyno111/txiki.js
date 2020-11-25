@@ -7,6 +7,7 @@ include(GNUInstallDirs)
 if (NOT CMAKE_BUILD_TYPE)
     message(STATUS "No build type selected, default to Release")
     set(CMAKE_BUILD_TYPE "Release")
+    set(DISABLE_WASM "ON")
 endif()
 message(STATUS "Building in ${CMAKE_BUILD_TYPE} mode")
 message(STATUS "Building with ${CMAKE_C_COMPILER_ID} ${CMAKE_C_COMPILER_VERSION} on ${CMAKE_SYSTEM}")
@@ -39,19 +40,6 @@ add_subdirectory(deps/quickjs EXCLUDE_FROM_ALL)
 
 option(libuv_buildtests "" OFF)
 add_subdirectory(deps/libuv EXCLUDE_FROM_ALL)
-
-option(REPLXX_BUILD_EXAMPLES "" OFF)
-option(BUILD_SHARED_LIBS "" OFF)
-add_subdirectory(deps/replxx EXCLUDE_FROM_ALL)
-
-cpr_option(DISABLE_WASM "If ON, WASM support will be disabled" OFF)
-if (NOT DISABLE_WASM)
-    option(BUILD_WASI_SUPPORT "" ON)
-    add_subdirectory(deps/wasm3/source EXCLUDE_FROM_ALL)
-    target_compile_definitions(m3 PRIVATE
-        d_m3LogOutput=0
-    )
-endif()
 
 cpr_option(DISABLE_CURL "If ON, curl support will be disabled" OFF)
 cpr_option(USE_SYSTEM_CURL "If ON, this project will look in the system paths for an installed curl library" ON)
