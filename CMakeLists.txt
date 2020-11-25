@@ -79,7 +79,6 @@ add_executable(tjs
     src/utils.c
     src/version.c
     src/vm.c
-    src/wasm.c
     src/worker.c
     src/xhr.c
     ${CMAKE_CURRENT_BINARY_DIR}/js.c
@@ -114,4 +113,4 @@ if (NOT DISABLE_WASM)
     target_link_libraries(tjs m3)
 endif()
 
-target_link_libraries(tjs qjs uv_a m stdc++)
+target_link_libraries(tjs qjs uv_a m atomic stdc++)
