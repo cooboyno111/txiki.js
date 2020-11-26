@@ -77,7 +77,7 @@ make
 *NOTE:* The txiki.js build depends on a number of git submodules (e.g. [curl], [libuv]). If you didn't already clone this repository recursively, make sure you initialize these submodules with `git submodule update --init` before proceeding to the build.
 
 ## Building for openwrt
-# 升级openwrt的cmake版本到3.5以上（仅限于openwrt15.05 QSDK）LEDE17以上不需要
+#升级openwrt的cmake版本到3.5以上（仅限于openwrt15.05 QSDK）LEDE17以上不需要
 
 
 ## Thanks
